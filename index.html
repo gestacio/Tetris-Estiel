@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tetris</title>
+		<link rel="stylesheet" type="text/css" href="css/tetris.css">
+	</head>
+
+<body>
+
+	<div class="title">Mini juego de tetris</div>
+
+	<div class="background_tetris" id="background_tetris">
+
+		<div class="ui_mainMenu" id="ui_mainMenu">
+			<button onclick="startGame()" class="btn">Empezar</button>	
+		</div>
+
+		<div class="ui_pause" id="ui_pause">
+			<div class="title_pause">En pausa</div>
+
+			<div class="btn_left">
+				<button onclick="resetGame()" class="btn">Reiniciar</button>
+			</div>
+			<div class="btn_right">
+				<button onclick="pausar(false)" class="btn">Continuar</button>
+			</div>
+
+			<br clear="all">
+
+		</div>
+
+	</div>
+
+	<div class="body" id="body">
+
+		<div class="positions right">
+			<canvas id="tetris" width="200" height="400"></canvas>
+		</div>
+
+		<div class="positions">
+
+			<div class="caja_lateral">
+				Siguiente: <canvas id="nextPiece" width="100" height="100"></canvas>
+			</div>
+			<div class="caja_lateral">
+				Puntaje
+				<div id="score"></div>	
+			</div>
+			<div class="caja_lateral">
+				Filas
+				<div id="lines"></div>
+			</div>
+			<div class="caja_lateral">
+				Nivel
+				<div id="level"></div>
+			</div>
+
+			<div class="btn_group">
+				<button onclick="pausar(true)" class="btn">Pausar</button>
+			</div>
+			
+		</div>
+
+	</div>
+
+
+	<script src="js/tetris.js"></script>
+</body>
+</html>
