@@ -267,9 +267,12 @@ function pausar(pausar_ahora) {
 	if (pause) {
 		document.getElementById("background_tetris").style.display = "block";
 		document.getElementById("ui_pause").style.display = "block";
+		document.getElementById("music_menu").pause() = "block";
 	} else {
 		document.getElementById("background_tetris").style.display = "none";
 		document.getElementById("ui_pause").style.display = "none";
+		document.getElementById("music_menu").play() = "block";
+
 		update();
 	}
 }
@@ -278,6 +281,8 @@ function startGame() {
 	document.getElementById("background_tetris").style.display = "none";
 	document.getElementById("ui_mainMenu").style.display = "none";
 	document.getElementById("body").style.display = "flex";
+	document.getElementById("music_menu").src="music/tetris-song.mp3";
+	document.getElementById("music_menu").play();
 	pause = false;
 	playerReset();
 	updateScore();
@@ -289,6 +294,9 @@ function resetGame() {
 	document.getElementById("ui_mainMenu").style.display = "block";
 	document.getElementById("ui_pause").style.display = "none";
 	document.getElementById("background_tetris").style.display = "block";
+	document.getElementById("music_menu").src="music/CFTI.mp3";
+	document.getElementById("music").play() = "block";
+
 }
 
 function updateScore() {
